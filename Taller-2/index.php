@@ -5,10 +5,10 @@ require "./logic.php";
 session_start();
 date_default_timezone_set('UTC');
 
-if (!isset($_SESSION['asc']) || !isset($_SESSION['orderByName']) || !isset($_SESSION['visitas'])) {
+if (!isset($_SESSION['asc']) || !isset($_SESSION['orderByName']) || !isset($_COOKIE['visitas'])) {
     $_SESSION['asc'] = false;
     $_SESSION['orderByName'] = true;
-    $_SESSION['visitas'] = 0;
+    setcookie('visitas',  0,time()+36000);
 }
 $res = true;
 if ($_POST) {

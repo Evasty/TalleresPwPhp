@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <?php $_SESSION['visitas']++;?>
+    <?php     setcookie('visitas', $_COOKIE['visitas']+1 ,time()+36000);?>
     <div class="splash">
         <?php echo isset($top_message) ? $top_message : ""; ?>
     </div>

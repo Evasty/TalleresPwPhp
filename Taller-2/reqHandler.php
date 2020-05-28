@@ -115,7 +115,7 @@ if ($_POST) {
     }elseif (isset($_POST['logout'])) {
         logout();
         header( "refresh:5;url=index.php" );
-        echo "<h2>Visitas: $_SESSION[visitas] </h2> <br> no sé si esta es la funcionalidad deseada porque no me pareció muy claro pero supongo que sirve (?) <br> aumenta cada vez que se infla un template y es var de sesión";
+        echo "<h2>Visitas: $_COOKIE[visitas] </h2> <br> <h3>now using cookies :shrug:</h3><br> <img src='https://art.pixilart.com/8edb1b22b8277f2.gif' >";
     }
     else { //show login/register page
         showForms('');
